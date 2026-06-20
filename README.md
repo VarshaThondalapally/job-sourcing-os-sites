@@ -8,9 +8,9 @@ This repository intentionally contains only public-facing static website assets.
 
 ```text
 /
-├── index.html       Landing chooser page
-├── investor/        Investor pitch website
-└── jobseekers/      Job-seeker product website
++-- index.html       Landing chooser page
++-- investor/        Investor pitch website
++-- jobseekers/      Job-seeker product website
 ```
 
 ## What Job Sourcing OS Is
