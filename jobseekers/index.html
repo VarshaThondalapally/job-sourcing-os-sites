@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Job Sourcing OS helps job seekers find active roles, verify the right human route, prove fit, track applications, and learn from outcomes."
+    />
+    <title>Job Sourcing OS | A calmer way to run a serious job search</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Job Sourcing OS home">
+        <span class="brand-mark">JS</span>
+        <span>Job Sourcing OS</span>
+      </a>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#how">How it works</a>
+        <a href="#control">Control</a>
+        <a href="#who">Who it helps</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="small-cta" href="#waitlist">Join waitlist</a>
+    </header>
+
+    <main id="main">
+      <section class="hero section" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">For serious job seekers</p>
+          <h1>Stop applying into the dark.</h1>
+          <p class="lede">
+            Job Sourcing OS helps you find active roles, verify the best route to a human,
+            prove why you fit, track every response, and improve your search from real outcomes.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#how">See the workflow</a>
+            <a class="secondary-button" href="#not">What this is not</a>
+          </div>
+          <div class="trust-strip" aria-label="Product principles">
+            <div><span>Not</span><strong>mass apply</strong></div>
+            <div><span>Not</span><strong>resume spam</strong></div>
+            <div><span>Built for</span><strong>human response</strong></div>
+          </div>
+        </div>
+
+        <div class="job-console" aria-label="Job search operating console">
+          <div class="console-top">
+            <span>Today&apos;s search board</span>
+            <span class="live-pill">human route required</span>
+          </div>
+          <div class="opportunity-card active">
+            <div>
+              <span class="tag">Verified Apply</span>
+              <h3>Forward Deployed AI Engineer</h3>
+              <p>Official form live. Founder post active. Fit sentence approved.</p>
+            </div>
+            <strong>Ready</strong>
+          </div>
+          <div class="opportunity-card">
+            <div>
+              <span class="tag warning">Verify route</span>
+              <h3>Founding Product Engineer</h3>
+              <p>LinkedIn fresh. Company page needs route check before resume work.</p>
+            </div>
+            <strong>Hold</strong>
+          </div>
+          <div class="opportunity-card muted">
+            <div>
+              <span class="tag danger">Blocked</span>
+              <h3>AI Engineer</h3>
+              <p>Final form closed. Saved as stale signal, not application target.</p>
+            </div>
+            <strong>Archive</strong>
+          </div>
+          <div class="console-metrics">
+            <div><span>Source</span><strong>fresh feed + official page</strong></div>
+            <div><span>Route</span><strong>CTA checked</strong></div>
+            <div><span>Proof</span><strong>specific fit sentence</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section problem-section" id="problem">
+        <div class="section-shell split">
+          <div>
+            <p class="eyebrow">The problem</p>
+            <h2>Your job search feels noisy because the tools stop too early.</h2>
+            <p>
+              Most tools help you find postings. But your hardest questions happen after that:
+              is this role real, who will see it, what should I send, and when should I follow up?
+            </p>
+          </div>
+          <div class="pain-grid">
+            <article>
+              <span>01</span>
+              <h3>Stale jobs look fresh</h3>
+              <p>Reposted or mirrored jobs can waste hours if the final source is closed or inactive.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Great fit still gets buried</h3>
+              <p>A strong resume can disappear if it goes through the wrong route.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>AI drafts sound the same</h3>
+              <p>Polished but generic messages fail because they could be sent to any company.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>No feedback loop</h3>
+              <p>Without response tracking, you cannot know which sources or messages actually work.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section promise-section">
+        <div class="section-shell">
+          <p class="eyebrow">The shift</p>
+          <h2>A job search operating system, not another job list.</h2>
+          <div class="equation" aria-label="Product equation">
+            <span>Active role</span>
+            <span>+</span>
+            <span>Right human route</span>
+            <span>+</span>
+            <span>Specific proof</span>
+            <span>+</span>
+            <span>Tracked follow-up</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section how-section" id="how">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">How it works</p>
+            <h2>Every job moves through gates before you spend serious effort.</h2>
+            <p>
+              The system slows down at the right moments so you do not waste energy on stale,
+              blocked, or generic applications.
+            </p>
+          </div>
+          <div class="workflow-layout">
+            <div class="workflow-steps" id="workflowSteps"></div>
+            <div class="workflow-panel" id="workflowPanel" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section architecture-section">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Under the hood</p>
+            <h2>Fifteen layers, explained in job-seeker language.</h2>
+            <p>
+              You do not need to think about all fifteen layers every day. The product uses them
+              to decide whether a role deserves action now, verification, watch, or archive.
+            </p>
+          </div>
+          <div class="layer-grid" id="layerGrid" aria-label="Architecture layers"></div>
+        </div>
+      </section>
+
+      <section class="section control-section" id="control">
+        <div class="section-shell split">
+          <div>
+            <p class="eyebrow">Human control</p>
+            <h2>AI helps prepare. You stay in charge.</h2>
+            <p>
+              The system is built to avoid overconfident AI. It labels evidence, shows what is
+              known or unknown, and pauses before sensitive actions.
+            </p>
+          </div>
+          <div class="control-cards">
+            <article>
+              <h3>AI can do</h3>
+              <ul>
+                <li>Find candidate roles from multiple sources</li>
+                <li>Compare final job pages against mirrors</li>
+                <li>Extract route hints and contact paths</li>
+                <li>Draft fit arguments with evidence labels</li>
+                <li>Update trackers after confirmed actions</li>
+              </ul>
+            </article>
+            <article class="human-card">
+              <h3>You approve</h3>
+              <ul>
+                <li>Final fit sentence</li>
+                <li>Resume version</li>
+                <li>Work authorization or relocation wording</li>
+                <li>Email, LinkedIn, or form submission</li>
+                <li>Any sensitive or confidential claim</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section examples-section">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Built from real search failures</p>
+            <h2>The product learns where normal job search breaks.</h2>
+          </div>
+          <div class="example-grid" id="exampleGrid"></div>
+        </div>
+      </section>
+
+      <section class="section who-section" id="who">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Who this helps</p>
+            <h2>Best for high-intent searches where every application should count.</h2>
+          </div>
+          <div class="persona-grid">
+            <article>
+              <h3>AI and product engineers</h3>
+              <p>Roles where proof, route, and judgment matter more than pure keyword matching.</p>
+            </article>
+            <article>
+              <h3>Career switchers with proof</h3>
+              <p>People who need to explain transferable proof without sounding generic.</p>
+            </article>
+            <article>
+              <h3>Senior operators</h3>
+              <p>People applying selectively to hard-to-reach roles, not mass-applying everywhere.</p>
+            </article>
+            <article>
+              <h3>Candidates with blockers</h3>
+              <p>People managing location, sponsorship, seniority, or domain-fit constraints carefully.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section not-section" id="not">
+        <div class="section-shell split">
+          <div>
+            <p class="eyebrow">What this is not</p>
+            <h2>This will not magically apply to hundreds of jobs for you.</h2>
+            <p>
+              The point is not volume. The point is better judgment, better routing,
+              and a tighter loop between effort and real responses.
+            </p>
+          </div>
+          <div class="not-list">
+            <div><span>No</span><strong>fake applications</strong></div>
+            <div><span>No</span><strong>AI-only sending</strong></div>
+            <div><span>No</span><strong>invented achievements</strong></div>
+            <div><span>No</span><strong>blind resume rewriting</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">FAQ</p>
+            <h2>Questions a serious job seeker will ask.</h2>
+          </div>
+          <div class="faq-list" id="faqList"></div>
+        </div>
+      </section>
+
+      <section class="section waitlist-section" id="waitlist">
+        <div class="section-shell waitlist-card">
+          <p class="eyebrow">Early access</p>
+          <h2>Run your job search like an operating system.</h2>
+          <p>
+            This product is in concept/manual workflow stage. The first version should prove
+            whether route intelligence and fit proof create more human responses than generic applications.
+          </p>
+          <form class="waitlist-form" aria-label="Early access form">
+            <label>
+              Email
+              <input type="email" placeholder="you@example.com" disabled />
+            </label>
+            <button type="button" disabled>Waitlist placeholder</button>
+          </form>
+          <small>No live signup is connected yet. TODO: connect waitlist or demo request workflow.</small>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

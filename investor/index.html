@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Job Sourcing OS is an AI operating system for finding active opportunities, verifying routes, proving fit, reaching humans, and learning from outcomes."
+    />
+    <title>Job Sourcing OS | Opportunity Routing Intelligence</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Job Sourcing OS home">
+        <span class="brand-mark" aria-hidden="true">JS</span>
+        <span>Job Sourcing OS</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#architecture">Architecture</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#audit">Failure audits</a>
+        <a href="#memo">Investor memo</a>
+      </nav>
+      <button class="ghost-button" id="pitchModeButton" type="button">Pitch mode</button>
+    </header>
+
+    <main id="main">
+      <section class="hero section-band" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Opportunity routing intelligence</p>
+          <h1>The job market is no longer a search problem. It is a route-intelligence problem.</h1>
+          <p class="hero-lede">
+            Job Sourcing OS turns fragmented postings, stale mirrors, hidden CTAs,
+            human routes, blockers, fit proof, and follow-up loops into one verified
+            operating system for reaching real opportunities.
+          </p>
+          <div class="hero-actions" aria-label="Primary calls to action">
+            <a class="primary-button" href="#architecture">Explore the architecture</a>
+            <a class="secondary-button" href="#memo">Read investor memo</a>
+          </div>
+          <dl class="signal-strip" aria-label="Core operating thesis">
+            <div>
+              <dt>Not</dt>
+              <dd>a job scraper</dd>
+            </div>
+            <div>
+              <dt>Not</dt>
+              <dd>a resume bot</dd>
+            </div>
+            <div>
+              <dt>Built for</dt>
+              <dd>active route proof</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-label="Opportunity routing visual">
+          <canvas id="signalCanvas" width="760" height="560"></canvas>
+          <div class="console-panel" aria-label="Live signal stack">
+            <div class="console-header">
+              <span>Signal stack</span>
+              <span class="status-pill">Evidence first</span>
+            </div>
+            <div class="console-row">
+              <span>Fresh feed</span>
+              <strong>Jack & Jill / LinkedIn / HN</strong>
+            </div>
+            <div class="console-row">
+              <span>Official truth</span>
+              <strong>ATS + company careers</strong>
+            </div>
+            <div class="console-row">
+              <span>Human route</span>
+              <strong>CTA / founder / hiring owner</strong>
+            </div>
+            <div class="console-row">
+              <span>Proof fit</span>
+              <strong>Specific failure mode</strong>
+            </div>
+            <div class="console-row">
+              <span>Learning loop</span>
+              <strong>Replies, misses, stale paths</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band sharp-band" id="not-scraper">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Category definition</p>
+            <h2>This is not a job scraper.</h2>
+            <p>
+              Scraping answers what was posted. A sourcing operating system asks
+              whether the role is live, reachable, aligned, safe to pursue, and
+              likely to reach a human.
+            </p>
+          </div>
+          <div class="contrast-grid" aria-label="Not a normal recruiting tool">
+            <article>
+              <span>01</span>
+              <h3>Not a job board</h3>
+              <p>It does not rank by keyword density or promoted listing visibility.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Not a resume bot</h3>
+              <p>It avoids mass-tailoring until liveness, route, and fit gates pass.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Not a chatbot</h3>
+              <p>It forces evidence labels, human approval points, and feedback loops.</p>
+            </article>
+            <article class="positive">
+              <span>OS</span>
+              <h3>An operating system</h3>
+              <p>Active opportunity + reachable human + specific proof fit + tracked follow-up.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band" id="problem">
+        <div class="section-shell two-column">
+          <div class="section-heading">
+            <p class="eyebrow">The problem</p>
+            <h2>Job extraction creates motion. It does not create signal.</h2>
+            <p>
+              The failure mode is not that candidates cannot find postings. The
+              failure mode is that they cannot tell which postings are alive,
+              which route matters, and what proof will make a human respond.
+            </p>
+          </div>
+          <div class="comparison">
+            <div class="comparison-block">
+              <h3>What a scraper gives</h3>
+              <ul>
+                <li>Title, company, URL, source</li>
+                <li>Sometimes location and salary</li>
+                <li>Possible posting date</li>
+                <li>Unverified mirror data</li>
+              </ul>
+            </div>
+            <div class="comparison-block accent">
+              <h3>What hiring actually needs</h3>
+              <ul>
+                <li>Active role proof</li>
+                <li>Best human route</li>
+                <li>Blocker checks</li>
+                <li>Specific fit proof</li>
+                <li>Response monitoring</li>
+                <li>Feedback from outcomes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band insight-band" id="insight">
+        <div class="section-shell">
+          <p class="eyebrow">Core insight</p>
+          <h2>The best opportunity is not the newest job.</h2>
+          <div class="equation" aria-label="Core product equation">
+            <span>Active company</span>
+            <span>+</span>
+            <span>Reachable human</span>
+            <span>+</span>
+            <span>Specific proof fit</span>
+            <span>+</span>
+            <span>Tracked follow-up</span>
+          </div>
+          <p class="wide-copy">
+            Job extraction is only Layer 3. The product value lives above extraction:
+            verification, route intelligence, blocker analysis, packet quality,
+            response monitoring, and strategic feedback.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-band architecture-band" id="architecture">
+        <div class="section-shell">
+          <div class="section-heading architecture-heading">
+            <div>
+              <p class="eyebrow">Interactive architecture</p>
+              <h2>Fifteen layers turn posting noise into an operating loop.</h2>
+            </div>
+            <p>
+              Click any layer. Each layer shows its purpose, why it matters,
+              output artifact, real example, and the AI/human boundary.
+            </p>
+          </div>
+
+          <div class="architecture-layout">
+            <div class="layer-stack" id="layerStack" aria-label="15-layer architecture"></div>
+            <aside class="layer-detail" id="layerDetail" aria-live="polite"></aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band workflow-band" id="workflow">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Workflow demo</p>
+            <h2>One opportunity moves through the operating system.</h2>
+            <p>
+              This demo shows the product logic without inventing production
+              traction. It is a grounded simulation based on the operating rules.
+            </p>
+          </div>
+
+          <div class="workflow-demo">
+            <div class="workflow-rail" id="workflowRail" aria-label="Workflow stages"></div>
+            <div class="workflow-output" id="workflowOutput" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band" id="modules">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Product surface</p>
+            <h2>Modules designed around decisions, not dashboards.</h2>
+          </div>
+          <div class="module-grid" id="moduleGrid" aria-label="Product modules"></div>
+        </div>
+      </section>
+
+      <section class="section-band audit-band" id="audit">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Proof through failure audits</p>
+            <h2>The product learns from misses, not vanity activity.</h2>
+            <p>
+              These examples are intentionally framed as product learning loops.
+              They are not fake traction claims.
+            </p>
+          </div>
+          <div class="audit-grid" id="auditGrid" aria-label="Failure audit loops"></div>
+        </div>
+      </section>
+
+      <section class="section-band safety-band" id="safety">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Human-in-the-loop controls</p>
+            <h2>The system is AI-native, but it is not AI-authoritarian.</h2>
+            <p>
+              The most important control is knowing where AI must stop. The
+              system treats AI as a research analyst and operations assistant,
+              not as the final decision-maker.
+            </p>
+          </div>
+          <div class="safety-layout">
+            <div class="safety-table">
+              <h3>AI can prepare</h3>
+              <ul>
+                <li>Gather and compare sources</li>
+                <li>Extract role facts and route hints</li>
+                <li>Draft fit arguments with evidence labels</li>
+                <li>Flag blockers and missing proof</li>
+                <li>Update trackers after confirmed actions</li>
+              </ul>
+            </div>
+            <div class="safety-table human">
+              <h3>Human must approve</h3>
+              <ul>
+                <li>Final fit sentence</li>
+                <li>Relocation and work-authorization stance</li>
+                <li>Sending email or submitting forms</li>
+                <li>Trial assignment offers</li>
+                <li>Sensitive or confidential claims</li>
+              </ul>
+            </div>
+            <div class="evidence-panel">
+              <h3>Evidence labels</h3>
+              <p><strong>Observed:</strong> directly seen in source.</p>
+              <p><strong>Inferred:</strong> reasoned from multiple signals.</p>
+              <p><strong>Unverified:</strong> plausible but not proven.</p>
+              <p><strong>Blocked:</strong> cannot proceed without new evidence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band why-now-band" id="why-now">
+        <div class="section-shell two-column">
+          <div class="section-heading">
+            <p class="eyebrow">Why now</p>
+            <h2>AI made applying easier. That made human signal harder.</h2>
+            <p>
+              As AI increases application volume, differentiation shifts from
+              polished documents to verified routes, specific proof, and learning
+              from actual response data.
+            </p>
+          </div>
+          <div class="why-list">
+            <article>
+              <span>01</span>
+              <h3>Application volume is cheap</h3>
+              <p>Generic AI-generated applications are easier to produce and easier to ignore.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Posting truth is fragmented</h3>
+              <p>LinkedIn, ATS mirrors, YC, company pages, and aggregators disagree.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Human routes matter more</h3>
+              <p>Hidden CTAs, founder posts, and team pages often matter more than Apply buttons.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Feedback compounds</h3>
+              <p>Replies, rejections, silence, and task requests become sourcing intelligence.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band market-band" id="market">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Market</p>
+            <h2>A wedge into opportunity routing and talent intelligence.</h2>
+            <p>
+              The first user is a high-agency candidate or operator. The larger
+              market expands into career operations, agencies, and talent
+              intelligence. Metrics stay TODO until validated.
+            </p>
+          </div>
+          <div class="market-grid">
+            <article>
+              <h3>Initial wedge</h3>
+              <p>High-agency job seekers targeting hard-to-reach AI, FDE, product, and founding roles.</p>
+              <span>TODO: user volume and willingness-to-pay data</span>
+            </article>
+            <article>
+              <h3>Operator layer</h3>
+              <p>Career coaches, placement operators, bootcamps, and fractional application teams.</p>
+              <span>TODO: paid pilot validation</span>
+            </article>
+            <article>
+              <h3>Talent intelligence</h3>
+              <p>Structured visibility into active companies, reachable humans, and fit patterns.</p>
+              <span>TODO: buyer discovery</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band business-band" id="business">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Business model</p>
+            <h2>Monetize the workflow where verification, routing, and response learning matter.</h2>
+          </div>
+          <div class="business-grid">
+            <article>
+              <span>Self-serve</span>
+              <h3>Candidate OS</h3>
+              <p>Subscription for verified sourcing, route intelligence, packet QA, and response tracking.</p>
+              <small>TODO: pricing test</small>
+            </article>
+            <article>
+              <span>Assisted</span>
+              <h3>Operator dashboard</h3>
+              <p>Workflow layer for coaches or job-search operators managing multiple candidates.</p>
+              <small>TODO: workflow pilot</small>
+            </article>
+            <article>
+              <span>Enterprise</span>
+              <h3>Talent intelligence</h3>
+              <p>Aggregated insights into where hiring is live, reachable, and role-fit constrained.</p>
+              <small>TODO: buyer validation</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band memo-band" id="memo">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Investor memo</p>
+            <h2>The operating thesis in one page.</h2>
+          </div>
+          <div class="memo-grid" id="memoGrid" aria-label="Investor memo"></div>
+        </div>
+      </section>
+
+      <section class="section-band final-cta" id="cta">
+        <div class="section-shell">
+          <p class="eyebrow">Final CTA</p>
+          <h2>Back the operating system for verified opportunity routing.</h2>
+          <p>
+            The next milestone is not more scraped roles. It is proving that
+            route intelligence, specific fit proof, and feedback loops produce
+            more human responses than generic applications.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button" id="pitchModeButtonBottom" type="button">Open pitch mode</button>
+            <a class="secondary-button" href="./INVESTOR_MEMO.md">Read editable memo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="pitch-dialog" id="pitchDialog" aria-labelledby="pitchTitle">
+      <div class="pitch-dialog-inner">
+        <div class="pitch-topbar">
+          <span>Pitch mode</span>
+          <button class="icon-button" id="closePitch" type="button" aria-label="Close pitch mode">x</button>
+        </div>
+        <section class="pitch-slide" id="pitchSlide">
+          <p class="eyebrow" id="pitchKicker"></p>
+          <h2 id="pitchTitle"></h2>
+          <p id="pitchBody"></p>
+        </section>
+        <div class="pitch-controls">
+          <button class="secondary-button" id="prevPitch" type="button">Previous</button>
+          <span id="pitchCounter" aria-live="polite"></span>
+          <button class="primary-button" id="nextPitch" type="button">Next</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
