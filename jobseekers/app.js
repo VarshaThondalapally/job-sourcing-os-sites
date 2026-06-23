@@ -23,13 +23,13 @@ const workflow = [
   },
   {
     label: "Route",
-    title: "Find the best path to a human",
-    body: "The system looks for role-specific CTAs, hiring owners, founder posts, team pages, recruiter contacts, and backup routes before defaulting to a generic apply button.",
+    title: "Prove the person route before messaging",
+    body: "The system looks for role-specific CTAs, hiring owners, founder posts, team pages, recruiter contacts, and public person evidence before defaulting to a generic apply button. Someone working at the company is not enough.",
     artifacts: {
       Input: "Company web presence",
-      Output: "Primary route + backup route",
-      Guardrail: "Route must be cited",
-      User: "You know who you are trying to reach"
+      Output: "A/B/C/D route confidence",
+      Guardrail: "Person relevance must be cited",
+      User: "You know why this person is a valid route"
     }
   },
   {
@@ -46,11 +46,11 @@ const workflow = [
   {
     label: "Apply",
     title: "Create the packet only after the gates pass",
-    body: "Resume deltas, form answers, LinkedIn notes, cold emails, and proof artifacts are created only when the role is live, reachable, and worth focused effort.",
+    body: "Resume deltas, form answers, LinkedIn notes, cold emails, and proof artifacts are created only when the role is live, the person route is proven, and the message passes send/hold quality control.",
     artifacts: {
-      Input: "Verified role + route + fit",
-      Output: "Application packet",
-      Guardrail: "No fake claims",
+      Input: "Verified role + route confidence + fit",
+      Output: "Application packet + persona message",
+      Guardrail: "No fake claims or company-level outreach",
       User: "You approve before anything is sent"
     }
   },
@@ -73,22 +73,26 @@ const layers = [
   ["03", "Ingestion", "Captures raw facts: title, company, source, date, location, JD, and route hints."],
   ["04", "Entity Resolution", "Combines duplicates from LinkedIn, ATS pages, company pages, and mirrors."],
   ["05", "Liveness Verification", "Checks whether the role is still real and accepting applications."],
-  ["06", "Route Intelligence", "Finds the best human route instead of relying only on Apply buttons."],
+  ["06", "Freshness + Hiring Intent", "Checks whether the company is actively hiring now, not merely hosting an old page."],
   ["07", "Fit Engine", "Connects the company&apos;s real problem to your specific proof."],
   ["08", "Blocker Engine", "Checks sponsorship, location, seniority, stack, domain, and application limits."],
-  ["09", "Decision Queues", "Sends each role to apply, verify, watch, hold, or archive."],
-  ["10", "Packet Layer", "Builds resume deltas, form answers, outreach, and proof artifacts."],
-  ["11", "Outreach CRM", "Tracks humans, messages, dates, channels, and follow-ups."],
-  ["12", "Inbox Monitor", "Watches for confirmations, replies, rejections, and assignments."],
-  ["13", "Feedback Loop", "Learns which sources and routes produce real human responses."],
-  ["14", "Quality Control", "Rejects false, generic, overconfident, or NDA-sensitive artifacts."],
-  ["15", "Strategy Layer", "Sets the weekly search direction so effort does not become random activity."]
+  ["09", "Route Intelligence", "Proves the application route and person route; every contact is A Direct, B Strong Adjacent, C Weak Adjacent, or D Invalid."],
+  ["10", "Decision Queue", "Sends each role to apply, verify, outreach, follow up, watch, hold, or archive."],
+  ["11", "Application Packet", "Builds resume deltas, form answers, and proof artifacts only after the form and blockers are known."],
+  ["12", "Persona Outreach CRM", "Creates messages only after route confidence, public evidence, persona fit, and send/hold QC pass."],
+  ["13", "Inbox + Follow-Up Monitor", "Watches confirmations, replies, rejections, assignments, accepted connections, and due follow-ups."],
+  ["14", "Feedback Loop", "Learns which sources, routes, personas, and proof artifacts produce real human responses."],
+  ["15", "Strategy Control", "Sets the next highest-probability action so effort does not become random activity."]
 ];
 
 const examples = [
   {
     title: "Route miss",
     text: "A role-specific contact can exist on a company careers page even when a job board points somewhere else. The system now checks owned sources before outreach."
+  },
+  {
+    title: "Person-route miss",
+    text: "A company-relevant note can still be wrong if the person is not proven relevant to the role. The system now labels every contact A/B/C/D before a message exists."
   },
   {
     title: "Fresh-feed gap",
@@ -119,7 +123,7 @@ const faqs = [
   },
   {
     q: "How does it avoid overconfident AI?",
-    a: "It labels evidence, keeps unknowns visible, uses approval gates, and rejects messages that could be sent to four companies."
+    a: "It labels evidence, keeps unknowns visible, uses approval gates, rejects messages that could be sent to four companies, and blocks company-level outreach that lacks person-route proof."
   },
   {
     q: "Who is it best for?",

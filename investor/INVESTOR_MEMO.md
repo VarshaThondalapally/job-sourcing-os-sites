@@ -49,16 +49,16 @@ Job Sourcing OS is a layered operating system:
 3. Ingestion
 4. Entity Resolution
 5. Liveness Verification
-6. Route Intelligence
+6. Freshness + Hiring Intent
 7. Fit Engine
 8. Blocker Engine
-9. Decision Queues
-10. Application Packet Layer
-11. Outreach CRM
-12. Inbox + Response Monitor
-13. Feedback Loop
-14. Quality Control
-15. Strategy Layer
+9. Route Intelligence
+10. Decision Queue
+11. Application Packet
+12. Persona Outreach CRM
+13. Inbox + Follow-Up Monitor
+14. Feedback Loop
+15. Strategy Control
 
 Job extraction is only Layer 3.
 
@@ -69,11 +69,11 @@ The higher-value product lives in verification, route intelligence, fit proof, b
 Potential defensibility comes from accumulated workflow intelligence:
 
 - which sources produce real human replies
-- which route types work by company stage and role type
+- which person-route types work by company stage, role type, and contact persona
 - which blockers invalidate opportunities
 - which proof artifacts improve response rates
 - which outreach patterns fail the interchangeability test
-- which company signals correlate with active hiring
+- which company and person signals correlate with active hiring and real response paths
 
 TODO: validate proprietary learning advantage with real user and response data.
 
@@ -117,7 +117,7 @@ The product can regress into writing polished but interchangeable outreach.
 
 Mitigation:
 
-Force the one-sentence fit gate and four-company test before any message is approved.
+Force the one-sentence fit gate, person-route confidence A/B/C/D, and four-company test before any message is approved.
 
 ### Source Fragility
 

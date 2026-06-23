@@ -46,12 +46,12 @@ const layers = [
   },
   {
     number: 6,
-    name: "Route Intelligence",
-    purpose: "Finds the best path to a human, not just the visible Apply button.",
-    why: "The route often determines whether the application is seen.",
-    output: "Primary route, backup route, contact priority, and message channel.",
-    example: "Voiceops had a direct Ali CTA on its careers page; the broader founder route was not the best first route.",
-    boundary: "No generic founder outreach until the role-specific route is checked."
+    name: "Freshness + Hiring Intent",
+    purpose: "Separates a page existing from a company actively hiring now.",
+    why: "A stale role can still look live on reposts, mirrors, and promoted boards.",
+    output: "Freshness evidence: posted date, repost date, hiring post, recruiter activity, or current official form.",
+    example: "A role can be visible on LinkedIn but still need an ATS or company-owned confirmation before packet work begins.",
+    boundary: "Stop if only internet existence proves freshness."
   },
   {
     number: 7,
@@ -73,64 +73,64 @@ const layers = [
   },
   {
     number: 9,
-    name: "Decision Queues",
-    purpose: "Routes every opportunity to the correct next action.",
-    why: "Without queues, sourcing, resume work, outreach, and follow-up collapse into one confusing stream.",
-    output: "Verified Apply, Verify-Outbound, Hold, Archive, or Watch.",
-    example: "A fresh job with no official form goes to Verify-Outbound before a custom resume is made.",
-    boundary: "No artifact before gates."
+    name: "Route Intelligence",
+    purpose: "Finds the application route and the human route, then proves whether the person is actually relevant to this role.",
+    why: "Human route must be person-proven, not company-assumed. Someone working at the company is not enough.",
+    output: "Route table with A Direct, B Strong Adjacent, C Weak Adjacent, or D Invalid confidence labels.",
+    example: "A direct careers CTA or recruiter post can be an A route; a generic employee with no role connection is C at best and often hold.",
+    boundary: "Stop if the human route is only 'works at company.'"
   },
   {
     number: 10,
-    name: "Application Packet Layer",
-    purpose: "Creates resume deltas, form answers, emails, LinkedIn notes, and proof artifacts after gates pass.",
-    why: "Tailoring only matters when it changes the hiring signal.",
-    output: "Approved packet with resume version, form answers, outreach, and optional artifact.",
-    example: "Market-calibrated base resume plus small role-specific delta, not a brand-new resume for every post.",
-    boundary: "No fake stack, traction, metrics, or confidential claims."
+    name: "Decision Queue",
+    purpose: "Routes every opportunity to Apply, Verify, Outreach, Follow-up, Hold, Archive, or Watch.",
+    why: "Without queues, sourcing, resume work, outreach, and follow-up collapse into one confusing stream.",
+    output: "Queue state and next action with evidence.",
+    example: "A fresh job with no official form goes to Verify before a custom resume is made.",
+    boundary: "Stop if queue state is based on hope."
   },
   {
     number: 11,
-    name: "Outreach CRM",
-    purpose: "Tracks humans, source, route quality, message, last touch, next touch, and response.",
-    why: "Applications are not the unit of work. Human routes are.",
-    output: "Contact plan and follow-up schedule.",
-    example: "Founder, role-specific CTA, recruiter, and team-member routes are tracked separately.",
-    boundary: "Human approves every send."
+    name: "Application Packet",
+    purpose: "Creates resume deltas, form answers, emails, proof artifacts, and application-specific notes after gates pass.",
+    why: "Tailoring only matters when it changes the hiring signal and follows the actual form.",
+    output: "Approved packet with resume version, form answers, source evidence, and optional proof artifact.",
+    example: "Market-calibrated base resume plus a role-specific delta, not a brand-new resume for every post.",
+    boundary: "Stop if the form was not read."
   },
   {
     number: 12,
-    name: "Inbox + Response Monitor",
-    purpose: "Closes the loop after applying by monitoring confirmations, rejections, replies, and task requests.",
-    why: "A job search OS must stay alive after submission.",
-    output: "Status updates, reply classification, follow-up task, and tracker change.",
-    example: "Tennr or Lamar response states update the pipeline instead of staying as static notes.",
-    boundary: "Silence is a status, not proof of failure."
+    name: "Persona Outreach CRM",
+    purpose: "Converts a verified human route into a channel-specific message.",
+    why: "The system cannot contact 'someone at the company.' Each contact must pass route confidence, public evidence, persona fit, and non-interchangeability checks before a message exists.",
+    output: "Persona-specific message, evidence block, route confidence A/B/C/D, and send/hold decision.",
+    example: "A recruiter, founder, engineering leader, and adjacent FDE peer each require a different proof angle and channel tone.",
+    boundary: "STOP: This is company-level personalization, not person-level outreach. Return to Route Intelligence."
   },
   {
     number: 13,
+    name: "Inbox + Follow-Up Monitor",
+    purpose: "Closes the loop after applying by monitoring confirmations, rejections, replies, accepted connections, task requests, and due follow-ups.",
+    why: "A job search OS must stay alive after submission.",
+    output: "Status updates, reply classification, follow-up task, and tracker change.",
+    example: "Confirmation, rejection, assignment, or follow-up states update the pipeline instead of staying as static notes.",
+    boundary: "Silence is a status, not proof of failure."
+  },
+  {
+    number: 14,
     name: "Feedback Loop",
     purpose: "Learns which sources, routes, messages, and proof artifacts actually produce human responses.",
     why: "Gut feel cannot improve unless it is graded.",
     output: "Source reply rate, route reply rate, failure categories, and weekly adjustments.",
-    example: "If HN produces replies and YC does not, the allocation shifts.",
-    boundary: "Low sample size must be labeled, not over-read."
-  },
-  {
-    number: 14,
-    name: "Quality Control",
-    purpose: "Protects against generic, false, sloppy, overconfident, or NDA-sensitive artifacts.",
-    why: "Well-written can still be wrong or interchangeable.",
-    output: "Pass, revise, or reject with reason.",
-    example: "A message that only says 'messy documents' fails if it could be sent to four companies.",
-    boundary: "The system rejects relief drafts that feel good but carry no specific signal."
+    example: "The Stord mistake becomes a route-proof correction rule instead of a one-off apology.",
+    boundary: "Stop if the same error repeats."
   },
   {
     number: 15,
-    name: "Strategy Layer",
+    name: "Strategy Control",
     purpose: "Allocates weekly effort across sources, role families, proof artifacts, outreach, and follow-up.",
     why: "Without strategy, the system becomes activity theater.",
-    output: "Weekly sourcing and application allocation.",
+    output: "Next highest-probability action plus weekly sourcing and application allocation.",
     example: "Increase fresh-feed coverage, preserve P0 deep packets, and reserve time for proof artifacts.",
     boundary: "AI recommends. Human signs the tradeoff."
   }
@@ -139,7 +139,7 @@ const layers = [
 const workflow = [
   {
     stage: "Discover",
-    title: "Fresh source catches a possible role",
+    title: "Role found, but not trusted yet",
     body: "A fresh feed finds a role before it has been validated. The system records it as a lead, not a truth source.",
     artifacts: {
       Input: "Jack & Jill / LinkedIn / HN lead",
@@ -150,7 +150,7 @@ const workflow = [
   },
   {
     stage: "Verify",
-    title: "Official source proves whether the role is live",
+    title: "Official role source proves whether it is live",
     body: "The company careers page, ATS, YC page, or final form decides whether the opportunity is active enough for effort.",
     artifacts: {
       Input: "Role URL and company page",
@@ -160,36 +160,36 @@ const workflow = [
     }
   },
   {
-    stage: "Route",
-    title: "The system finds the best human path",
-    body: "Route intelligence checks role-specific CTAs, founder posts, team pages, recruiter notes, and backup contacts.",
-    artifacts: {
-      Input: "Company web presence",
-      Output: "Primary route + backup route",
-      Risk: "Wrong founder or generic inbox",
-      Control: "Route priority order"
-    }
-  },
-  {
-    stage: "Prove",
-    title: "Fit becomes a specific failure-mode sentence",
-    body: "The system asks what breaks if the company hires the wrong person, then maps that risk to actual proof.",
+    stage: "Fit + Block",
+    title: "Fit sentence and blockers are checked before routing",
+    body: "The system writes one non-interchangeable failure-mode fit sentence, then checks sponsorship, location, seniority, stack, domain, travel, and application caps.",
     artifacts: {
       Input: "JD, company signal, candidate proof",
-      Output: "One-sentence fit gate",
-      Risk: "Interchangeable outreach",
-      Control: "Four-company test"
+      Output: "Fit sentence + blocker decision",
+      Risk: "Interchangeable fit or fatal blocker",
+      Control: "Four-company test + blocker matrix"
     }
   },
   {
-    stage: "Package",
-    title: "Assets are created only after gates pass",
-    body: "Resume deltas, form answers, outreach, and proof artifacts are built only when the role is active and specific.",
+    stage: "Route",
+    title: "Person-route proof comes before any message",
+    body: "Route intelligence checks role-specific CTAs, hiring posts, team pages, recruiter notes, founder signals, and public work. The person is labeled A/B/C/D before outreach exists.",
     artifacts: {
-      Input: "Verified role + route + fit",
-      Output: "Application packet",
-      Risk: "Resume sprawl",
-      Control: "Meaningful delta rule"
+      Input: "Application route + human-route surfaces",
+      Output: "A/B/C/D route confidence",
+      Risk: "Company-level personalization",
+      Control: "Person evidence required"
+    }
+  },
+  {
+    stage: "Message",
+    title: "Persona message receives a send or hold decision",
+    body: "Only after route proof does the system create a channel-specific message shaped for the person's role, public evidence, likely concern, and medium.",
+    artifacts: {
+      Input: "Verified role + route confidence + persona evidence",
+      Output: "Persona message + send/hold decision",
+      Risk: "Treating a person as a forwarding desk",
+      Control: "Send/hold QC"
     }
   },
   {
@@ -208,12 +208,13 @@ const workflow = [
 const modules = [
   ["Source Discovery", "Collects leads from fresh feeds, ATS pages, company pages, YC, LinkedIn, HN, and founder/team surfaces."],
   ["Liveness Verification", "Separates active proof from stale or mirrored postings before artifacts are created."],
-  ["Route Intelligence", "Finds the best human path: direct CTA, hiring owner, founder, recruiter, or backup route."],
+  ["Freshness + Hiring Intent", "Separates page existence from evidence that a company is actively hiring now."],
   ["Fit Engine", "Turns JD and company signals into a specific failure-mode fit sentence that cannot be reused everywhere."],
   ["Blocker Engine", "Checks work authorization, location, seniority, required stack, domain requirements, and application limits."],
+  ["Route Intelligence", "Proves the application route and human route, then labels each contact A Direct, B Strong Adjacent, C Weak Adjacent, or D Invalid."],
   ["Packet Builder", "Creates resume deltas, form answers, outreach, and proof artifacts only after gates pass."],
-  ["Outreach CRM", "Tracks contacts, route quality, message, follow-up date, response, and next action."],
-  ["Inbox Monitor", "Classifies confirmations, rejections, replies, assignments, and silence into live pipeline updates."],
+  ["Persona Outreach CRM", "Creates no message until a verified person route passes public evidence, persona fit, medium, red-flag, and send/hold checks."],
+  ["Inbox + Follow-Up Monitor", "Classifies confirmations, rejections, replies, assignments, accepted connections, due follow-ups, and silence into live pipeline updates."],
   ["Feedback Loop", "Grades sources and routes by human replies instead of gut feel or vanity application count."]
 ];
 
@@ -227,6 +228,11 @@ const audits = [
     label: "Jack & Jill",
     title: "Fresh-feed coverage gap",
     text: "A fresh source surfaced webAI, PermitFlow, Distyl AI, Clera, GC AI, and Gradial before the manual sourcing loop did. That made fresh-feed coverage mandatory."
+  },
+  {
+    label: "Stord",
+    title: "Person-route proof failure",
+    text: "Company-relevant outreach was not enough. We treated an employee with possible AI/product relevance as if they were connected to the open role. Correction: no outreach until the person is labeled A/B/C/D and the message connects to that person's role, work, or interests."
   },
   {
     label: "PermitFlow",
@@ -254,9 +260,9 @@ const memo = [
 const pitchSlides = [
   ["Category", "This is not a job scraper.", "Scraping answers what was posted. Job Sourcing OS answers whether the role is live, reachable, aligned, safe to pursue, and likely to reach a human."],
   ["Problem", "Job extraction creates motion, not signal.", "Candidates drown in fresh-looking but stale, duplicated, or low-route postings. The missing layer is verification and route intelligence."],
-  ["Insight", "The best opportunity is not the newest job.", "The best opportunity is active company + reachable human + specific proof fit + tracked follow-up."],
+  ["Insight", "The best opportunity is not the newest job.", "The best opportunity is active role + person-proven route + specific proof fit + tracked follow-up."],
   ["Architecture", "Job extraction is only Layer 3.", "Fifteen layers turn raw postings into a decision loop: source, verify, route, fit, block, packet, outreach, monitor, learn."],
-  ["Proof", "Failure audits became product requirements.", "Voiceops proved route misses. Jack & Jill proved fresh-feed gaps. Tennr proved response-monitor loop closure."],
+  ["Proof", "Failure audits became product requirements.", "Voiceops proved owned-route misses. Stord proved company relevance is not person-route proof. Jack & Jill proved fresh-feed gaps."],
   ["Safety", "AI prepares. Humans approve.", "The system uses evidence labels and human approval points to stop overconfident automation from creating false claims or generic outreach."],
   ["Market", "A wedge into opportunity routing.", "Start with high-agency candidates and career operators, then expand toward structured talent intelligence."],
   ["Ask", "Prove response lift.", "The next milestone is showing that verified routes, specific fit proof, and feedback loops produce more human responses than generic applications."]

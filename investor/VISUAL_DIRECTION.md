@@ -107,13 +107,13 @@ Visual concept:
 The equation should feel like an operating thesis:
 
 ```text
-active company + reachable human + specific proof fit + tracked follow-up
+active role + person-proven route + specific proof fit + tracked follow-up
 ```
 
 Prompt:
 
 ```text
-High-end product thesis visualization, four physical interface tiles on a dark work surface labeled active company, reachable human, proof fit, tracked follow-up, thin illuminated routing lines connecting them into a closed operating loop, realistic materials, no people, no robots, premium technology editorial style
+High-end product thesis visualization, four physical interface tiles on a dark work surface labeled active role, person-proven route, proof fit, tracked follow-up, thin illuminated routing lines connecting them into a closed operating loop, realistic materials, no people, no robots, premium technology editorial style
 ```
 
 ### Interactive 15-Layer Architecture

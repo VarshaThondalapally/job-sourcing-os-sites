@@ -6,13 +6,13 @@ Job Sourcing OS is opportunity routing intelligence.
 
 It is not a job scraper, job board, resume bot, or generic recruiting chatbot.
 
-It is an AI operating system for finding active opportunities, verifying the best route, proving fit, reaching humans, tracking responses, and learning from outcomes.
+It is an AI operating system for finding active opportunities, verifying the best role and person route, proving fit, reaching humans through evidence-backed channels, tracking responses, and learning from outcomes.
 
 ## Hero
 
 The job market is no longer a search problem. It is a route-intelligence problem.
 
-Job Sourcing OS turns fragmented postings, stale mirrors, hidden CTAs, human routes, blockers, fit proof, and follow-up loops into one verified operating system for reaching real opportunities.
+Job Sourcing OS turns fragmented postings, stale mirrors, hidden CTAs, person-proven human routes, blockers, fit proof, and follow-up loops into one verified operating system for reaching real opportunities.
 
 ## Category Line
 
@@ -20,7 +20,7 @@ From scraping jobs to operating a sourcing system.
 
 ## Core Equation
 
-Active company + reachable human + specific proof fit + tracked follow-up.
+Active role + person-proven route + specific proof fit + tracked follow-up.
 
 ## Problem
 
@@ -41,9 +41,10 @@ The failure mode is not that candidates cannot find postings. The failure mode i
 ## What Hiring Actually Needs
 
 - active role proof
-- best human route
+- person-proven human route
 - blocker checks
 - specific fit proof
+- persona send/hold QC
 - packet quality
 - response monitoring
 - feedback from outcomes
@@ -52,7 +53,7 @@ The failure mode is not that candidates cannot find postings. The failure mode i
 
 The best opportunity is not the newest job.
 
-The best opportunity is an active company with a reachable human, a specific proof fit, and a tracked follow-up path.
+The best opportunity is an active role with a person-proven route, a specific proof fit, and a tracked follow-up path.
 
 Job extraction is only Layer 3. The product value lives above extraction: verification, route intelligence, blocker analysis, packet quality, response monitoring, and strategic feedback.
 
@@ -66,9 +67,13 @@ Collects leads from fresh feeds, ATS pages, company pages, YC, LinkedIn, HN, and
 
 Separates active proof from stale or mirrored postings before artifacts are created.
 
+### Freshness + Hiring Intent
+
+Separates page existence from evidence that the company is actively hiring now.
+
 ### Route Intelligence
 
-Finds the best human path: direct CTA, hiring owner, founder, recruiter, or backup route.
+Finds the application route and human route, then labels each contact A Direct, B Strong Adjacent, C Weak Adjacent, or D Invalid. Human route must be person-proven, not company-assumed.
 
 ### Fit Engine
 
@@ -82,13 +87,13 @@ Checks work authorization, location, seniority, required stack, domain requireme
 
 Creates resume deltas, form answers, outreach, and proof artifacts only after gates pass.
 
-### Outreach CRM
+### Persona Outreach CRM
 
-Tracks contacts, route quality, message, follow-up date, response, and next action.
+Converts a verified human route into a channel-specific message. It does not allow the system to contact "someone at the company." Each contact must pass route confidence, public evidence, persona fit, and non-interchangeability checks before a message exists.
 
-### Inbox Monitor
+### Inbox + Follow-Up Monitor
 
-Classifies confirmations, rejections, replies, assignments, and silence into live pipeline updates.
+Classifies confirmations, rejections, replies, assignments, accepted connections, due follow-ups, and silence into live pipeline updates.
 
 ### Feedback Loop
 
@@ -103,6 +108,10 @@ Route-intelligence miss. The visible path was not enough. A role-specific CTA ex
 ### Jack & Jill
 
 Fresh-feed coverage gap. A fresh source surfaced high-fit roles before the manual sourcing loop did. That made fresh-feed coverage mandatory.
+
+### Stord
+
+Person-route proof failure. The message was company-relevant, but the person route was not sufficiently proven. Correction: no outreach until the person is labeled A/B/C/D and the message connects to that person's role, work, or interests.
 
 ### PermitFlow
 
@@ -119,12 +128,14 @@ AI can prepare:
 - gather and compare sources
 - extract role facts and route hints
 - draft fit arguments with evidence labels
+- label human routes A/B/C/D with public evidence
 - flag blockers and missing proof
 - update trackers after confirmed actions
 
 Human must approve:
 
 - final fit sentence
+- person-route confidence and send/hold decision
 - relocation and work-authorization stance
 - sending email or submitting forms
 - trial assignment offers
@@ -148,7 +159,7 @@ Career coaches, placement operators, bootcamps, and fractional application teams
 
 Talent intelligence:
 
-Structured visibility into active companies, reachable humans, and fit patterns.
+Structured visibility into active companies, person-proven routes, and fit patterns.
 
 ## Business Model
 
@@ -180,6 +191,6 @@ Use TODO placeholders until validated:
 
 ## Final CTA
 
-Back the operating system for verified opportunity routing.
+Back the operating system for verified opportunity routing with human-route verification.
 
 The next milestone is not more scraped roles. It is proving that route intelligence, specific fit proof, and feedback loops produce more human responses than generic applications.

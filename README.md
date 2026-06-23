@@ -2,7 +2,7 @@
 
 Public website bundle for Job Sourcing OS.
 
-This repository intentionally contains only public-facing static website assets. It should not include the broader `2025-work` product repository, environment files, private data, resumes, tracker exports, or confidential job-search records.
+This repository intentionally contains only public-facing static website assets. It should not include private product repositories, environment files, private data, resumes, tracker exports, or confidential job-search records.
 
 ## Live Site Structure
 

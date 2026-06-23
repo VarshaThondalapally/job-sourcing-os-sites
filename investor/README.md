@@ -15,21 +15,13 @@ It is not:
 - a resume bot
 - a generic recruiting chatbot
 
-It is an AI operating system for finding active opportunities, verifying the best route, proving fit, reaching humans, tracking responses, and learning from outcomes.
+It is an AI operating system for finding active opportunities, verifying the best role and person route, proving fit, reaching humans through evidence-backed channels, tracking responses, and learning from outcomes.
 
 ## Source Material
 
-Primary factual source:
-
-```text
-job_search_system/2026_Founding_AI_Job_Search_Local/08_Strategy_Notes/JOB_SOURCING_OS_FULL_DOCUMENTATION_WITH_VOICEOVER_2026-06-20.md
-```
-
-Visual and narrative reference:
-
-```text
-job_search_system/2026_Founding_AI_Job_Search_Local/08_Strategy_Notes/Job_Sourcing_Operating_System_Pyramid_2026-06-20.pptx
-```
+This public folder contains only sanitized website assets and editable investor copy.
+Private sourcing docs, trackers, resumes, application packets, and work samples should
+stay outside this repository.
 
 ## Files
 
@@ -50,7 +42,7 @@ This is a static site. You can open `index.html` directly in a browser.
 For a local server:
 
 ```powershell
-cd C:\Users\varsh\Documents\Codex\2026-06-09\i-want-you-to-clone-this\2025-work\job_search_system\job_sourcing_os_investor_site
+cd investor
 python -m http.server 5173
 ```
 
@@ -103,16 +95,16 @@ The website uses the same 15-layer architecture as the documentation:
 3. Ingestion
 4. Entity Resolution
 5. Liveness Verification
-6. Route Intelligence
+6. Freshness + Hiring Intent
 7. Fit Engine
 8. Blocker Engine
-9. Decision Queues
-10. Application Packet Layer
-11. Outreach CRM
-12. Inbox + Response Monitor
-13. Feedback Loop
-14. Quality Control
-15. Strategy Layer
+9. Route Intelligence
+10. Decision Queue
+11. Application Packet
+12. Persona Outreach CRM
+13. Inbox + Follow-Up Monitor
+14. Feedback Loop
+15. Strategy Control
 
 Each layer card includes:
 
@@ -122,6 +114,8 @@ Each layer card includes:
 - output artifact
 - example
 - AI/human boundary
+
+Layer 12 is persona outreach, not generic outreach. The site must not imply that finding an employee at the company is enough for a message. Contacts require route confidence A/B/C/D, public evidence, persona fit, and send/hold QC.
 
 ## Deployment To Vercel
 
@@ -139,7 +133,7 @@ Option 2: Git deploy
 3. Set the root directory to:
 
 ```text
-job_search_system/job_sourcing_os_investor_site
+investor
 ```
 
 4. No build command is required.
@@ -169,4 +163,5 @@ Before sending this site to an investor or accelerator:
 - make sure the product is framed bigger than a personal job-search tool
 - keep failure audits as learning loops, not excuses
 - preserve the AI/human approval boundary
+- preserve the person-route proof boundary before outreach
 - avoid fake traction, fake customer logos, and inflated market numbers

@@ -10,7 +10,7 @@ Job Sourcing OS helps job seekers:
 
 - find active roles
 - verify whether a role is real and reachable
-- identify the best route to a human
+- identify the best person-proven route to a human
 - explain fit with specific proof
 - avoid generic AI messages
 - track applications and responses
@@ -22,6 +22,8 @@ It is not:
 - a job scraper
 - a resume spam tool
 - a guarantee of interviews
+
+Layer 12 is Persona Outreach CRM. Outreach cannot happen just because someone works at the company. Every contact needs route confidence A/B/C/D, public evidence, persona fit, and send/hold quality control before a message exists.
 
 ## Files
 
@@ -35,7 +37,7 @@ README.md    This file
 ## How To Run Locally
 
 ```powershell
-cd C:\Users\varsh\Documents\Codex\2026-06-09\i-want-you-to-clone-this\2025-work\job_search_system\job_sourcing_os_jobseeker_site
+cd jobseekers
 python -m http.server 5174
 ```
 
